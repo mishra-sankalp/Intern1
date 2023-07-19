@@ -1,0 +1,234 @@
+.f{
+    height: 50px;
+    width: 50px;
+    background-color: #000200;
+}
+.logo{
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-right: 6rem;
+    /* background-color: black; */
+}
+body{
+    height: 100vh;
+    background-color:#000200;
+    color:white;
+    /* background-image:url('star2.png'); */
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width:100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+}
+.navbar .links{
+    display: flex;
+    gap:2rem; 
+}
+.navbar .toggle_btn{
+    display: none;
+    color: aliceblue;
+    font-size: 1.5rem;
+    cursor:pointer;
+}
+.links li a{
+    color:white;
+}
+a{
+    text-decoration: none;
+    color: #000200;
+    font-size: 1 rem;
+}
+header{
+    position: relative;
+    background-color: #000200;
+    color:white;
+}
+li{
+    list-style: none;
+    display: inline-flex;
+}
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans=serif;
+} */
+.action_btn{
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action_btn:hover{
+    size:1.05;
+    color:grey;
+}
+.action_btn:active{
+     size:0.95;
+}
+/* DROPDOWN */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right:2rem;
+    top:60px;
+    width: 300px;
+    height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu li{
+    color:#000200;
+    padding:0.6rem  1.5rem 0.5rem 1.5rem;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+.dropdown_menu .action_btn{
+    width: 1000;
+    display: flex;
+    justify-content: center;
+}
+.open{
+    background: #000200;
+    height: 929px;
+}
+/* Responsive Design */
+@media(max-width:976px){
+    .navbar .links,.navbar .action_btn{
+        display: none;
+    }
+p{
+    margin-bottom: 35px;
+    font-size: 25px;
+}
+    .navbar .toggle_btn{
+        color: #fff;
+        display: block;
+    }
+    .navbar .class_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        background-color: #fff;
+        margin: 0;
+        padding: 0%;
+        display:block;
+        text-align: left;
+    }
+    .animation{
+        display: flex;
+    }
+}
+@media(max-width:576px){
+    .dropdown_menu
+    {
+        padding-left: 5rem;
+        padding-right: 0rem;
+        width: unset;
+        margin:0;
+    }
+    .dropdown_menu a{
+        margin-top: 1rem;
+    }
+    .navbar .toggle_btn{
+        color: #fff;
+        display: block;
+    }
+}
+
+/* Animation section */
+section{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(8, 8, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .star{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 8s ease-in-out infinite,
+               backgroundmove 16s linear infinite;
+}
+.star.star1{
+    animation-delay: 0s;
+    background-image:url("star1.png");
+}
+.star.star2{
+    animation-delay: -1s;
+    background-image:url('star2.png');
+}
+.star.star3{
+    animation-delay: -2s;
+    background-image:url('star3.png');
+}
+.star.star4{
+    animation-delay: -3s;
+    background:url('star4.png');
+}
+.star.star5{
+    animation-delay: -4s;
+    background:url('star5.png');
+}
+.star.star6{
+    animation-delay: -5s;
+    background:url('star6.png');
+}
+.star.star7{
+    animation-delay: -6s;
+    background:url('star7.png');
+}
+.star.star8{
+    animation-delay: -7s;
+    background:url('star8.png');
+}
+@keyframes animate{
+    0%,20%,40%,60%,80%,100%{
+        opacity: 0;
+    }
+    10%,30%,50%,70%,90%{
+        opacity: 1;
+    }
+}
+@keyframes backgroundmove{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+/* content */
+
+.central1{
+   display: block;
+    font-size: xx-large;
+}
+.central2{
+    display: block;
+    font-size: xx-large;
+}

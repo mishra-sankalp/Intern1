@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="C:\Users\sanka\OneDrive\Desktop\arambh\adzplug\fontawesome-free-6.4.0-web\css\fontawesome.css" rel="stylesheet">
+    <link href="C:\Users\sanka\OneDrive\Desktop\arambh\adzplug\fontawesome-free-6.4.0-web\css\brands.css" rel="stylesheet">
+    <link href="C:\Users\sanka\OneDrive\Desktop\arambh\adzplug\fontawesome-free-6.4.0-web\css\solid.css" rel="stylesheet">
+</head>
+<body>
+    <!-- //navbar section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img class='f' src="logoFinal.png" alt="">
+            </div>
+                <ul class="links">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="brand">Brand</a></li>
+                    <li><a href="influencer">Influencer</a></li>
+                    <li><a href="pricing">Pricing</a></li>
+                    <li><a href="blog">Blog</a></li>
+                    <li><a href="contacts">Contacts</a></li>
+                </ul>
+                <!-- <a href="#" class="class_btn">Get Started</a> -->
+                <div class="toggle_btn "><i class="fa-solid fa-bars"></i>
+                </div>
+        </div>
+        <div class="dropdown_menu ">
+            <li><a href="home"><p><i class="fa-solid fa-house"></i>  Home</p></a></li>
+            <li><a href="brand"><p><i class="fa-solid fa-briefcase"></i>  Brand</p></a></li>
+            <li><a href="influencer"><p><i class="fa-solid fa-user"></i>  Influencer</p></a></li>
+            <li><a href="pricing"><p><i class="fa-solid fa-indian-rupee-sign"></i>  Pricing</p></a></li>
+            <li><a href="blog"><p><i class="fa-solid fa-blog"></i>  Blog</p></a></li>
+            <li><a href="contacts"><p><i class="fa-solid fa-phone"></i>  Contact</p></a></li>
+        </div>
+    </header>
+    <section>
+        <div class="central1"><h1>Discover. Connect.</h1><h1>Collaborate</h1></div>
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+        <div class="star star4"></div>
+        <div class="star star5"></div>
+        <div class="star star6"></div>
+        <div class="star star7"></div>
+        <div class="star star8"></div>
+    </section>
+    <!-- js code to make sure that on click three bars ....those bars changes to cross size and also it calls class name ='open' -->
+    <script>
+        const toggleBtn=document.querySelector('.toggle_btn');
+        const toggleBtnIcon=document.querySelector('.toggle_btn i');
+        const dropdownMenu=document.querySelector('.dropdown_menu');
+        const anim=document.querySelector('section');
+        toggleBtn.onclick=function(){
+            dropdownMenu.classList.toggle('open')
+            const isOpen=dropdownMenu.classList.contains('open')
+            toggleBtnIcon.classList=isOpen?'fa-solid fa-xmark':'fa-solid fa-bars'
+            anim.style.display=isOpen?'none':'flex'
+        }
+    </script>
+</body>
+</html>
